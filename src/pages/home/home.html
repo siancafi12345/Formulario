@@ -1,17 +1,201 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <div class="ini">
+    <h6 class="ini2">Fromulario Empleo</h6>
+  </div>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+
+    
+  
+   <ion-item class="border">
+    <ion-icon name="ios-briefcase" item-left ></ion-icon>  
+    <ion-label stacked>Nombre del establecimiento</ion-label>
+    <ion-input style="display:none"></ion-input>
+    </ion-item>
+
+  <ion-row class="top1">
+    <div>
+         <h6></h6>
+        
+      <h6 class="center"> </h6>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="nombre">
+          <ion-option value="n">ejemplo1</ion-option>
+          <ion-option value="n1">ejemplo2</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  
+<hr class="hr1">
+  
+  
+
+
+  <ion-item>
+    <ion-icon name="ios-people" item-left></ion-icon>
+    <ion-label stacked>Numero de empleados en año anterior</ion-label>
+    <ion-input formControName="number" type="number" placeholder="Numero"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-person" item-left></ion-icon>
+    <ion-label stacked>Nombre del contacto</ion-label>
+    <ion-input formControName="name-cont" type="text" placeholder="Nombre"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-clipboard" item-left></ion-icon>
+    <ion-label stacked>Cargo</ion-label>
+    <ion-input formControName="cargo-cont" type="text" placeholder="Cargo"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-call" item-left></ion-icon>
+    <ion-label stacked>Telefono</ion-label>
+    <ion-input formControName="tel-cont" type="number" placeholder="Telefono"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-eye" item-left></ion-icon>
+    <ion-label stacked>Extensión</ion-label>
+    <ion-input formControName="ext-cont" type="number" placeholder="Extensión"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-phone-portrait" item-left></ion-icon>
+    <ion-label stacked>Celular</ion-label>
+    <ion-input formControName="cel-cont" type="number" placeholder="Celular"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-item>
+    <ion-icon name="ios-mail" item-left></ion-icon>
+    <ion-label stacked>Correo Electrónico</ion-label>
+    <ion-input formControName="cel-cont" type="email" placeholder="Correo Electrónico"></ion-input>
+  </ion-item>
+  
+<hr class="hr1">
+  <ion-row class="top">
+    <div>
+      <h6></h6>
+      <h6 class="center">En el mes de ejemplo ¿ Hubo cargos que requirieron capacitación?</h6>
+    </div>
+  <ion-list class="top2">
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="uno">
+          <ion-option value="1" >SI</ion-option>
+          <ion-option value="">NO</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    
+  </ion-row>
+
+  <ion-item  [hidden]="!uno">
+    <ion-icon name="ios-aperture" item-left></ion-icon>
+    <ion-label stacked>¿En cuáles temas?</ion-label>
+    <ion-input formControName="cual-tema" type="text" placeholder="¿En cuáles temas?"></ion-input>
+  </ion-item>
+  <hr class="hr1">
+
+
+  <ion-row class="top">
+    <div>
+      <h6></h6>
+      <h6 class="center">¿ Ha realizado procesos de capacitación en su empresa?</h6>
+    </div>
+    <ion-list class="top2">
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="dos">
+          <ion-option value="1">SI</ion-option>
+          <ion-option value="">NO</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <ion-item [hidden]="!dos">
+    <ion-icon name="ios-aperture" item-left></ion-icon>
+    <h6 class="center">Por favor indique en que temáticas</h6>
+    <ion-input formControName="cual-temas" type="text" placeholder="Por favor indique en que temáticas "></ion-input>
+  </ion-item>
+  <hr class="hr1">
+
+
+  <ion-row class="top">
+    <div>
+      <h6></h6>
+      <h6 class="center">Dando cumplimiento a la ley de Protección de datos Personales le solicito su autorización para que SITUR Bolívar pueda
+        contactarlo nuevamente en caso de ser necesario ¿Está usted de acuerdo?</h6>
+    </div>
+    <ion-list class="top2">
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="tres">
+          <ion-option value="n">SI</ion-option>
+          <ion-option value="n1">NO</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <hr class="hr1">
+
+  <ion-row class="top">
+    <div>
+      <h6></h6>
+      <h6 class="center">Ya para terminar, le solicito su autorización para que SITUR Bolívar comparta sus respuestas con las entidades que
+        contrataron el proyecto, ¿está usted de acuerdo?</h6>
+    </div>
+    <ion-list class="top2">
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="cuatro">
+          <ion-option value="n">SI</ion-option>
+          <ion-option value="n1">NO</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <hr class="hr1">
+  
+ 
+
+  <ion-row class="top">
+    <div>
+      <h6></h6>
+      <h6 class="center">Por que medio le gustaría actualizar información:</h6>
+    </div>
+    <ion-list class="top2">
+      <ion-item>
+        <ion-label>Selecciona</ion-label>
+        <ion-select [(ngModel)]="medio">
+          <ion-option value="ne">Internet</ion-option>
+          <ion-option value="ne1">Telefonicamente</ion-option>
+          <ion-option value="ne2">Contacto directo</ion-option>
+          
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <hr class="hr1">
+
+
+
+
+  <div padding>
+    <button ion-button block type="submit">Guardar</button>
+  </div>
 </ion-content>
